@@ -4,12 +4,25 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+#bg {
+  height: 100vh;
   background: rgb(76, 41, 129);
   background: radial-gradient(
     circle,
     rgba(76, 41, 129, 1) 0%,
     rgba(34, 18, 57, 1) 100%
   );
+}
+
+img {
+  width: 500px;
+  position: absolute;
+}
+
+img[src*="stroke.svg"] {
+  margin-bottom: -50px;
 }
 
 a {
