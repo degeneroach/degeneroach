@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Center, Image, Box } from "@chakra-ui/react";
+import { Link, Center, Image, Box } from "@chakra-ui/react";
 import { css } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 
@@ -30,34 +30,41 @@ export default function Home() {
 
   const { x, y } = useMousePosition();
   return (
-    <Box id="bg">
-      <Center height="100vh">
-        <Image
-          src="/stroke.svg"
-          style={{
-            transform: `translateX(${(x - vw / 2) / 100}px) translateY(${
-              (y - vh / 2) / 100
-            }px)`,
-          }}
-        />
-        <Image
-          src="/outline.svg"
-          style={{
-            transform: `translateX(${(x - vh / 2) / 40}px) translateY(${
-              (y - vh / 2) / 40
-            }px)`,
-          }}
-        />
-        <Image
-          src="/degen.svg"
-          style={{
-            transform: `translateX(${(x - vw / 2) / 80}px) translateY(${
-              (y - vh / 2) / 900
-            }px)`,
-          }}
-        />
-      </Center>
-    </Box>
+    <>
+      <Head>
+        <title>degeneroach#8635 does web3</title>
+      </Head>
+      <Link href="https://twitter.com/degeneroach/">
+        <Box id="bg">
+          <Center height="100vh">
+            <Image
+              src="/stroke.svg"
+              style={{
+                transform: `translateX(${(x - vw / 2) / 100}px) translateY(${
+                  (y - vh / 2) / 100
+                }px)`,
+              }}
+            />
+            <Image
+              src="/outline.svg"
+              style={{
+                transform: `translateX(${(x - vh / 2) / 40}px) translateY(${
+                  (y - vh / 2) / 40
+                }px)`,
+              }}
+            />
+            <Image
+              src="/degen.svg"
+              style={{
+                transform: `translateX(${(x - vw / 2) / 80}px) translateY(${
+                  (y - vh / 2) / 900
+                }px)`,
+              }}
+            />
+          </Center>
+        </Box>
+      </Link>
+    </>
   );
 }
 
