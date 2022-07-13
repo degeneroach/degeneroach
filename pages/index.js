@@ -52,7 +52,7 @@ export default function Home() {
           src="/degen.svg"
           style={{
             transform: `translateX(${(x - vw / 2) / 80}px) translateY(${
-              (y - vh / 2) / 100
+              (y - vh / 2) / 900
             }px)`,
           }}
         />
