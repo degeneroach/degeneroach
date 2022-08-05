@@ -4,62 +4,31 @@ import { css } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 
 export default function Home() {
-  const [vw, setVW] = useState(1920);
-  const [vh, setVH] = useState(1080);
-
-  const useMousePosition = () => {
-    const [mousePosition, setMousePosition] = useState({ x: null, y: null });
-
-    const updateMousePosition = (ev) => {
-      setMousePosition({ x: ev.clientX, y: ev.clientY });
-    };
-
-    useEffect(() => {
-      window.addEventListener("mousemove", updateMousePosition);
-
-      return () => window.removeEventListener("mousemove", updateMousePosition);
-    }, []);
-
-    return mousePosition;
-  };
-
-  useEffect(() => {
-    setVW(window?.innerWidth);
-    setVH(window?.innerHeight);
-  }, []);
-
-  const { x, y } = useMousePosition();
   return (
     <>
       <Head>
         <title>degeneroach#8635 does web3</title>
       </Head>
+      <iframe
+        src="https://my.spline.design/weirdbubblecopy-ff12ca495978a97af42c63d33022c602/"
+        frameborder="0"
+        width="100%"
+        height="100%"
+        style={{
+          position: `absolute`,
+          width: `100%`,
+          height: `100%`,
+          zIndex: `1`,
+        }}
+      ></iframe>
       <Link href="https://twitter.com/degeneroach/">
         <Box id="bg">
           <Center height="100vh">
-            <Image
-              src="/stroke.svg"
-              style={{
-                transform: `translateX(${(x - vw / 2) / 100}px) translateY(${
-                  (y - vh / 2) / 100
-                }px)`,
-              }}
-            />
-            <Image
-              src="/outline.svg"
-              style={{
-                transform: `translateX(${(x - vh / 2) / 40}px) translateY(${
-                  (y - vh / 2) / 40
-                }px)`,
-              }}
-            />
+            <Image src="/stroke.svg" style={{ zIndex: `2` }} />
+            <Image src="/outline.svg" style={{ zIndex: `2` }} />
             <Image
               src="/degen.svg"
-              style={{
-                transform: `translateX(${(x - vw / 2) / 80}px) translateY(${
-                  (y - vh / 2) / 900
-                }px)`,
-              }}
+              style={{ zIndex: `2`, paddingTop: `100px` }}
             />
           </Center>
         </Box>
@@ -67,4 +36,3 @@ export default function Home() {
     </>
   );
 }
-

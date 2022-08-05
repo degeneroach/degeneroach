@@ -18,16 +18,17 @@ body {
 
 img {
   width: 500px;
+  top: 20px;
   position: absolute;
 }
 
 img[src*="stroke.svg"] {
-  margin-bottom: -50px;
+  padding-top: 150px;
 }
 
 img[src*="outline.svg"] {
-  margin-top: -50px;
-  width: 750px;
+  padding-top: 50px;
+  width: 500px;
 }
 
 a {
