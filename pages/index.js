@@ -11,9 +11,6 @@ export default function Home() {
       </Head>
       <iframe
         src="https://my.spline.design/weirdbubblecopy-ff12ca495978a97af42c63d33022c602/"
-        frameborder="0"
-        width="100%"
-        height="100%"
         style={{
           position: `absolute`,
           width: `100%`,
